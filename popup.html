@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{font:13px Arial,sans-serif;width:300px;margin:0;padding:12px;color:#111}
+h1{font-size:15px;margin:0 0 8px} .big{font-size:24px;font-weight:700}
+.row{display:flex;justify-content:space-between;margin:4px 0} .muted{color:#666}
+table{width:100%;border-collapse:collapse;margin-top:6px} td{padding:2px 0;border-bottom:1px solid #eee}
+button,input{font:inherit} button{margin:6px 6px 0 0;padding:4px 8px} input{width:60px}
+</style></head><body>
+<h1>Terno Credits</h1>
+<div class="big" id="bal">--</div>
+<div class="row"><span class="muted">Spent today</span><span id="today">--</span></div>
+<div class="row"><span class="muted">Last change</span><span id="delta">--</span></div>
+<div class="row"><span class="muted">Warn when at or below $</span><input id="low" type="number" step="0.1" min="0"></div>
+<table id="hist"></table>
+<button id="csv">Export CSV</button><button id="clear">Clear history</button>
+<div class="muted" style="margin-top:8px">Updates when a Terno tab is open. Open app.terno.ai once to refresh.</div>
+<script src="popup.js"></script></body></html>

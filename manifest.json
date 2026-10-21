@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Terno Credits Counter",
+  "version": "1.2.0",
+  "description": "Shows your Terno AI LLM credit balance, how much you spent today, and a usage history.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://*.terno.ai/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    { "matches": ["https://*.terno.ai/*"], "js": ["content.js"], "run_at": "document_idle" }
+  ],
+  "action": { "default_title": "Terno Credits", "default_popup": "popup.html" }
+}
